@@ -1,0 +1,243 @@
+
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#menu{
+    padding: 0 50px;
+    background-color: #080808;
+
+}
+#menu1{
+    padding: 0 0;
+    background-color: #080808;
+
+
+}
+
+#background{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+#padding{
+    padding: 180px 0px;
+    color: white;
+}
+
+#centradoarmas{
+    padding-left: 500px;
+}
+
+#padding1{
+    padding: 170px 50px;
+    color: white;
+}
+
+#center{
+    padding: 0px 200px;
+}
+
+#final{
+    text-align: center;
+    padding: 100px 50px;
+}
+
+#centrar{
+    text-align: center;
+    padding: 50px 50px;
+}
+
+#division{
+    padding: 50px 50px;
+    float: right;
+}
+
+#a{
+    text-align: center;
+    background-color: rgb(196, 201, 201);
+}
+
+#personajes{
+    padding: 50px 50px;
+}
+
+#backgroundnoticias{
+    background-color: rgb(196, 201, 201);
+    padding: 50px 5px;
+    
+
+}
+
+#tnoticias{
+    color: red;
+    padding: 50px 50px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+#noticias{
+    margin-left: 10px;
+}
+
+
+
+#cabeza{
+    min-height: 100vh;
+    position:relative;
+}
+
+#letra{
+    position:relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 150px;
+}
+video{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*responsivo */
+}
+
+.capa{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+
+
+}
+
+#row2{
+    background-color: rgb(0, 0, 0);
+    padding: 0px 30px;
+    color: rgb(164, 166, 168);
+
+}
+
+header{
+    height: 100px;
+    background-color: #080808;
+    padding: 0 50px;
+    color: white;
+    display:flex; /* ORDENADO HACIA EL LADO */
+    justify-content: space-between; /* ESPACIADO ENTRE SI */
+    align-items: center; /* CENTRADOS */
+}
+
+#titulo{
+    height: 250px;
+    padding: 50px 50px;
+    background-color: #000000;
+    color: rgb(164, 166, 168);
+}
+
+/* RELOJ JS */
+
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family:sans-serif;
+}
+section {
+	width:25%;
+	height:25%;
+	top:0;
+	left:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+.reloj {
+	color: white;
+	font-weight:bold;
+	font-size:15px;
+}
+
+
+
+.logo {
+    text-transform: uppercase; /* MAYUSCULAS */
+    color: white;
+    font-weight: 200; /* PORTE LETRA */
+}
+
+.menu a{
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none; /* QUITAR EL SUBRAYADO */
+    padding: 0 10px; /* 0 ARRIBA - 10 LADOS */
+    transition: 0.4s; /* SELECCIONADO DEL MOUSE 0.4s */
+}
+
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer; /* SELECCIONAR */
+    display: none; /* OCULTAR MENUS */
+    transition: 0.8s;
+}
+
+.mostrar-menu{
+    order:1; /* ORDENAR MENUS*/
+}
+
+.menu a:hover, 
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    /* background: black; AL PASAR EL MOUSE POR ALGO DEL MENU CAMBIA EL COLOR DEL FONDO */
+    color:rgb(96, 95, 95); /* CAMBIA COLOR AL PASAR MOUSE MENU */
+
+}
+
+#check{
+    display:none; /* OCULTAR CHECKBOX */
+}
+
+@media(max-width: 768px){ /* TABLET */
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu{
+        display: block; /* SACAR EL DISPLAY PARA MOSTRAR MENU EN CASO DE TABLETS*/
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh; /* VH = VIEW X HIGH */
+        background-color: #080808;
+        right: -100%;
+       top: 0; /* ENCIMA DEL COLOR */
+       text-align: center;
+       padding: 100px 0px;
+       z-index: 100 ; /* EN CASO DE HABER OTROS ELEMENTOS NO LOS PISA */
+       transition: 0,8s;
+
+    }
+    .menu a{
+        display:block; /* Uno encima de otro */
+        padding: 20px;
+
+        
+    }
+    .esconder-menu{
+        position: absolute;
+        top:40px;                /* ELIMINAR X Y REPOSICIONAR */
+        right:40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+}
